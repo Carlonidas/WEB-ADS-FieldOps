@@ -1,11 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f7f5">
+    <title>Dashboard | Field Ops</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    
+    <nav class="navbar navbar-expand-lg app-nav">
+        <div class="container-fluid app-container">
+            <a class="navbar-brand brand" href="index.html">
+                <span class="brand-mark"><i class="bi bi-compass"></i></span>
+                <span>field<span class="brand-accent">ops</span></span>
+            </a>
+            <div class="nav-links" aria-label="Navegação principal">
+                <a class="nav-link active" href="index.html"><i class="bi bi-grid-1x2-fill"></i> Visão geral</a>
+                <a class="nav-link" href="inspecoes.html"><i class="bi bi-clipboard-check"></i> Inspeções</a>
+                <a class="nav-link" href="planejamento.html"><i class="bi bi-calendar3"></i> Planejamento</a>
+                <a class="nav-link" href="clientes.html"><i class="bi bi-buildings"></i> Cadastros</a>
+            </div>
+            <div class="supervisor-chip"><span class="avatar">CH</span><span class="d-none d-sm-inline">Carlos Henrique</span><i class="bi bi-chevron-down small"></i></div>
+        </div>
+    </nav>
+
+    <main class="container-fluid app-container page-content">
+        <div class="page-heading">
+            <div>
+                <p class="eyebrow">Sexta-feira, 26 de setembro de 2026</p>
+                <h1>Visão geral</h1>
+                <p class="text-secondary mb-0">Acompanhe a operação e as inspeções da sua equipe.</p>
+            </div>
+            <a class="btn btn-ink" href="planejamento.html"><i class="bi bi-plus-lg me-2"></i>Planejar inspeção</a>
+        </div>
+
+        <section class="row g-3 metric-grid" aria-label="Indicadores de inspeções">
+            <div class="col-12 col-sm-6 col-xl-3"><article class="metric-card metric-amber"><div class="metric-top"><span>Pendentes</span><i class="bi bi-hourglass-split"></i></div><strong>12</strong><small><span class="metric-dot"></span> 4 prioritárias</small></article></div>
+            <div class="col-12 col-sm-6 col-xl-3"><article class="metric-card metric-blue"><div class="metric-top"><span>Em andamento</span><i class="bi bi-arrow-repeat"></i></div><strong>08</strong><small>3 técnicos em campo</small></article></div>
+            <div class="col-12 col-sm-6 col-xl-3"><article class="metric-card metric-green"><div class="metric-top"><span>Concluídas</span><i class="bi bi-check2-circle"></i></div><strong>34</strong><small>+6 nesta semana</small></article></div>
+            <div class="col-12 col-sm-6 col-xl-3"><article class="metric-card metric-coral"><div class="metric-top"><span>Não conformidades</span><i class="bi bi-exclamation-triangle"></i></div><strong>03</strong><small>Requerem revisão</small></article></div>
+        </section>
+
+        <section class="row g-4 dashboard-grid mt-1">
+            <div class="col-12 col-xl-8">
+                <article class="panel h-100">
+                    <div class="panel-heading"><div><p class="eyebrow mb-1">Operação</p><h2>Inspeções recentes</h2></div><a class="text-link" href="inspecoes.html">Ver todas <i class="bi bi-arrow-up-right"></i></a></div>
+                    <div class="table-responsive">
+                        <table class="table align-middle inspection-table mb-0">
+                            <thead><tr><th>Inspeção</th><th>Local / equipamento</th><th>Técnico</th><th>Status</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>INS-0248</strong><small>Hoje, 09:30</small></td><td>Unidade Centro<small>Compressor CP-04</small></td><td>Marina Costa</td><td><span class="status-badge status-progress">Em andamento</span></td></tr>
+                                <tr><td><strong>INS-0247</strong><small>Hoje, 08:00</small></td><td>Planta Norte<small>Painel elétrico QD-12</small></td><td>Rafael Lima</td><td><span class="status-badge status-review">Aguardando revisão</span></td></tr>
+                                <tr><td><strong>INS-0246</strong><small>Ontem, 15:45</small></td><td>Armazém Sul<small>Empilhadeira EP-08</small></td><td>Joana Alves</td><td><span class="status-badge status-done">Aprovada</span></td></tr>
+                                <tr><td><strong>INS-0245</strong><small>Ontem, 13:10</small></td><td>Unidade Centro<small>Bomba hidráulica BH-02</small></td><td>Marina Costa</td><td><span class="status-badge status-rejected">Reprovada</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </div>
+            <div class="col-12 col-xl-4">
+                <article class="panel progress-panel mb-4">
+                    <div class="panel-heading"><div><p class="eyebrow mb-1">Este mês</p><h2>Ritmo da equipe</h2></div><span class="trend-icon"><i class="bi bi-graph-up-arrow"></i></span></div>
+                    <div class="progress-summary"><strong>78%</strong><span>das inspeções concluídas</span></div>
+                    <div class="progress" role="progressbar" aria-label="Inspeções concluídas este mês" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"><div class="progress-bar" style="width: 78%"></div></div>
+                    <div class="progress-legend"><span><i></i> 34 concluídas</span><span>10 restantes</span></div>
+                </article>
+                <article class="priority-panel">
+                    <div class="priority-icon"><i class="bi bi-exclamation-lg"></i></div>
+                    <div><p class="eyebrow mb-1">Atenção necessária</p><h2>4 inspeções prioritárias</h2><p>Há tarefas aguardando atribuição para hoje.</p><a href="inspecoes.html">Revisar pendências <i class="bi bi-arrow-right"></i></a></div>
+                </article>
+            </div>
+        </section>
+        <footer class="page-footer">Field Ops <span>·</span> Painel do Supervisor <span>·</span> Dados demonstrativos</footer>
+    </main>
 </body>
 </html>
