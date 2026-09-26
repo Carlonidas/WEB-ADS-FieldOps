@@ -12,7 +12,7 @@ O painel é voltado para o **supervisor**, profissional responsável por organiz
 
 | Nome | GitHub |
 | --- | --- |
-| Carlos Henrique Mendes da Silva |  |
+| Carlos Henrique Mendes da Silva | Carlonidas |
 
 > Projeto desenvolvido individualmente.
 
