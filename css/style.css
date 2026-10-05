@@ -6,8 +6,8 @@
   --paper: #f4f7f5;
   --green: #157a5a;
   --green-dark: #115f47;
-  --font-body: "DM Sans", sans-serif;
-  --font-display: "Manrope", sans-serif;
+  --font-body: sans-serif;
+  --font-display: sans-serif;
 }
 
 * { box-sizing: border-box; }
