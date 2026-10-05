@@ -87,10 +87,10 @@ fieldops/
 
 | Item | Link |
 | --- | --- |
-| Repositório |  |
-| GitHub Project |  |
-| Pull Request |  |
-| GitHub Pages |  |
+| Repositório | https://github.com/Carlonidas/WEB-ADS-FieldOps  |
+| GitHub Project | https://github.com/users/Carlonidas/projects/2 |
+| Pull Request | https://github.com/Carlonidas/WEB-ADS-FieldOps/pulls |
+| GitHub Pages | https://carlonidas.github.io/WEB-ADS-FieldOps/ |
 
 ---
 
