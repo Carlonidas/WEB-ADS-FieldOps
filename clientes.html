@@ -1,17 +1,88 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Clientes | Field Ops</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"><link href="css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
+
 <body>
-  <nav class="navbar app-nav"><div class="container-fluid app-container"><a class="navbar-brand brand" href="index.html"><span class="brand-mark"><i class="bi bi-compass"></i></span><span>field<span class="brand-accent">ops</span></span></a><div class="nav-links"><a class="nav-link" href="index.html"><i class="bi bi-grid-1x2-fill"></i> Visão geral</a><a class="nav-link" href="inspecoes.html"><i class="bi bi-clipboard-check"></i> Inspeções</a><a class="nav-link" href="planejamento.html"><i class="bi bi-calendar3"></i> Planejamento</a><a class="nav-link active" href="clientes.html"><i class="bi bi-buildings"></i> Cadastros</a></div></div></nav>
+  <nav class="navbar app-nav">
+    <div class="container-fluid app-container"><a class="navbar-brand brand" href="index.html"><span
+          class="brand-mark"><i class="bi bi-compass"></i></span><span>field<span
+            class="brand-accent">ops</span></span></a>
+      <div class="nav-links"><a class="nav-link" href="index.html"><i class="bi bi-grid-1x2-fill"></i> Visão geral</a><a
+          class="nav-link" href="inspecoes.html"><i class="bi bi-clipboard-check"></i> Inspeções</a><a class="nav-link"
+          href="planejamento.html"><i class="bi bi-calendar3"></i> Planejamento</a><a class="nav-link active"
+          href="clientes.html"><i class="bi bi-buildings"></i> Cadastros</a></div>
+    </div>
+  </nav>
   <main class="container-fluid app-container page-content">
-    <div class="page-heading"><div><p class="eyebrow">Base operacional</p><h1>Clientes</h1><p class="text-secondary mb-0">Empresas atendidas pela equipe de inspeção.</p></div><button class="btn btn-ink" type="button"><i class="bi bi-plus-lg me-2"></i>Novo cliente</button></div>
-    <div class="d-flex flex-wrap gap-2 mb-3"><a class="btn btn-sm btn-success" href="clientes.html">Clientes</a><a class="btn btn-sm btn-outline-secondary" href="locais.html">Locais</a><a class="btn btn-sm btn-outline-secondary" href="equipamentos.html">Equipamentos</a><a class="btn btn-sm btn-outline-secondary" href="checklists.html">Checklists</a></div>
-    <section class="panel"><div class="panel-heading"><div><p class="eyebrow mb-1">Cadastros</p><h2>Clientes ativos</h2></div><input class="form-control" style="max-width:260px" type="search" placeholder="Buscar cliente" aria-label="Buscar cliente"></div><div class="table-responsive"><table class="table align-middle inspection-table mb-0"><thead><tr><th>Cliente</th><th>Segmento</th><th>Locais</th><th>Status</th><th>Ações</th></tr></thead><tbody><tr><td><strong>Indústria Horizonte</strong><small>Desde março de 2024</small></td><td>Manufatura</td><td>3 locais</td><td><span class="status-badge status-done">Ativo</span></td><td><button class="btn btn-sm btn-outline-secondary" type="button" aria-label="Editar cliente"><i class="bi bi-pencil"></i></button></td></tr><tr><td><strong>Logística Via Norte</strong><small>Desde julho de 2025</small></td><td>Logística</td><td>2 locais</td><td><span class="status-badge status-done">Ativo</span></td><td><button class="btn btn-sm btn-outline-secondary" type="button" aria-label="Editar cliente"><i class="bi bi-pencil"></i></button></td></tr><tr><td><strong>Alimentos Campo Verde</strong><small>Desde janeiro de 2026</small></td><td>Alimentos</td><td>1 local</td><td><span class="status-badge status-review">Em implantação</span></td><td><button class="btn btn-sm btn-outline-secondary" type="button" aria-label="Editar cliente"><i class="bi bi-pencil"></i></button></td></tr></tbody></table></div></section>
+    <div class="page-heading">
+      <div>
+        <p class="eyebrow">Base operacional</p>
+        <h1>Clientes</h1>
+        <p class="text-secondary mb-0">Empresas atendidas pela equipe de inspeção.</p>
+      </div><button class="btn btn-ink" type="button"><i class="bi bi-plus-lg me-2"></i>Novo cliente</button>
+    </div>
+    <div class="d-flex flex-wrap gap-2 mb-3"><a class="btn btn-sm btn-success" href="clientes.html">Clientes</a><a
+        class="btn btn-sm btn-outline-secondary" href="locais.html">Locais</a><a
+        class="btn btn-sm btn-outline-secondary" href="equipamentos.html">Equipamentos</a><a
+        class="btn btn-sm btn-outline-secondary" href="checklists.html">Checklists</a></div>
+    <section class="panel">
+      <div class="panel-heading">
+        <div>
+          <p class="eyebrow mb-1">Cadastros</p>
+          <h2>Clientes ativos</h2>
+        </div><input class="form-control" style="max-width:260px" type="search" placeholder="Buscar cliente"
+          aria-label="Buscar cliente">
+      </div>
+      <div class="table-responsive">
+        <table class="table align-middle inspection-table mb-0">
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Segmento</th>
+              <th>Locais</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Indústria Horizonte</strong><small>Desde março de 2024</small></td>
+              <td>Manufatura</td>
+              <td>3 locais</td>
+              <td><span class="status-badge status-done">Ativo</span></td>
+              <td><button class="btn btn-sm btn-outline-secondary" type="button" aria-label="Editar cliente"><i
+                    class="bi bi-pencil"></i></button></td>
+            </tr>
+            <tr>
+              <td><strong>Logística Via Norte</strong><small>Desde julho de 2025</small></td>
+              <td>Logística</td>
+              <td>2 locais</td>
+              <td><span class="status-badge status-done">Ativo</span></td>
+              <td><button class="btn btn-sm btn-outline-secondary" type="button" aria-label="Editar cliente"><i
+                    class="bi bi-pencil"></i></button></td>
+            </tr>
+            <tr>
+              <td><strong>Alimentos Campo Verde</strong><small>Desde janeiro de 2026</small></td>
+              <td>Alimentos</td>
+              <td>1 local</td>
+              <td><span class="status-badge status-review">Em implantação</span></td>
+              <td><button class="btn btn-sm btn-outline-secondary" type="button" aria-label="Editar cliente"><i
+                    class="bi bi-pencil"></i></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
     <footer class="page-footer">Field Ops <span>·</span> Cadastros demonstrativos</footer>
   </main>
 </body>
+
 </html>
