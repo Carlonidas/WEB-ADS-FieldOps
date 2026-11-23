@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#edf1ed"/>
+  <rect x="130" y="70" width="540" height="460" rx="20" fill="#c8d2cc" stroke="#77847e" stroke-width="12"/>
+  <rect x="180" y="120" width="440" height="300" rx="12" fill="#263b34"/>
+  <g fill="#5288a5"><rect x="220" y="160" width="110" height="70" rx="8"/><rect x="350" y="160" width="110" height="70" rx="8"/><rect x="480" y="160" width="100" height="70" rx="8"/></g>
+  <g fill="#d28b27"><circle cx="275" cy="320" r="28"/><circle cx="405" cy="320" r="28"/><circle cx="535" cy="320" r="28"/></g>
+  <text x="400" y="520" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#1e302b">Painel de controle</text>
+</svg>

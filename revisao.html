@@ -4,20 +4,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Revisão de inspeção | Field Ops</title>
+  <title>Projeto Field Ops</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar app-nav">
-    <div class="container-fluid app-container"><a class="navbar-brand brand" href="index.html"><span
-          class="brand-mark"><i class="bi bi-compass"></i></span><span>field<span
-            class="brand-accent">ops</span></span></a>
-      <div class="nav-links"><a class="nav-link" href="index.html">Visão geral</a><a class="nav-link active"
-          href="inspecoes.html">Inspeções</a><a class="nav-link" href="planejamento.html">Planejamento</a><a
-          class="nav-link" href="clientes.html">Cadastros</a></div>
+  <nav class="navbar navbar-expand-lg app-nav" aria-label="Navegação principal">
+    <div class="container-fluid app-container"><a class="navbar-brand brand" href="index.html"><span class="brand-mark"><i class="bi bi-compass"></i></span><span>field<span class="brand-accent">ops</span></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menuPrincipal"><ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Visão geral</a></li><li class="nav-item"><a class="nav-link active" aria-current="page" href="inspecoes.html">Inspeções</a></li><li class="nav-item"><a class="nav-link" href="planejamento.html">Planejamento</a></li>
+        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cadastros</a><ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="clientes.html">Clientes</a></li><li><a class="dropdown-item" href="locais.html">Locais</a></li><li><a class="dropdown-item" href="equipamentos.html">Equipamentos</a></li><li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="checklists.html">Modelos de checklist</a></li></ul></li>
+      </ul></div>
     </div>
   </nav>
   <main class="container-fluid app-container page-content">
@@ -62,9 +62,11 @@
             de proteção com fixação comprometida.</div>
           <p class="text-secondary mb-0">Observação do técnico: recomendado substituir os parafusos da tampa antes da
             próxima operação.</p>
-          <div class="d-flex gap-2 mt-3"><span class="badge text-bg-light border p-2"><i
-                class="bi bi-image me-1"></i>evidencia_01.jpg</span><span class="badge text-bg-light border p-2"><i
-                class="bi bi-image me-1"></i>evidencia_02.jpg</span></div>
+          <div class="row g-2 mt-1">
+            <div class="col-4"><button class="btn p-0 border-0 w-100" type="button" data-bs-toggle="modal" data-bs-target="#modalEvidencia" data-evidencia="img/evidencia-quadro-forca.svg" data-titulo="Evidência 1 — quadro de força"><img src="img/evidencia-quadro-forca.svg" class="img-fluid rounded" alt="Evidência 1 — quadro de força" loading="lazy"></button></div>
+            <div class="col-4"><button class="btn p-0 border-0 w-100" type="button" data-bs-toggle="modal" data-bs-target="#modalEvidencia" data-evidencia="img/evidencia-painel.svg" data-titulo="Evidência 2 — painel de controle"><img src="img/evidencia-painel.svg" class="img-fluid rounded" alt="Evidência 2 — painel de controle" loading="lazy"></button></div>
+            <div class="col-4"><button class="btn p-0 border-0 w-100" type="button" data-bs-toggle="modal" data-bs-target="#modalEvidencia" data-evidencia="img/evidencia-cabeamento.svg" data-titulo="Evidência 3 — cabeamento"><img src="img/evidencia-cabeamento.svg" class="img-fluid rounded" alt="Evidência 3 — cabeamento" loading="lazy"></button></div>
+          </div>
         </section>
       </div>
       <div class="col-12 col-lg-4">
@@ -84,6 +86,11 @@
     </div>
     <footer class="page-footer">Field Ops <span>·</span> Revisão demonstrativa</footer>
   </main>
+  <div class="modal fade" id="modalEvidencia" tabindex="-1" aria-labelledby="tituloEvidencia" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5" id="tituloEvidencia">Evidência</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body text-center"><img id="imagemEvidencia" src="img/evidencia-quadro-forca.svg" class="img-fluid rounded" alt="Evidência selecionada"></div></div></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#dfe7e2"/>
+  <rect x="90" y="70" width="620" height="460" rx="24" fill="#eef2ef" stroke="#1e302b" stroke-width="16"/>
+  <rect x="150" y="130" width="500" height="340" rx="12" fill="#1e302b"/>
+  <g fill="#157a5a"><circle cx="220" cy="210" r="22"/><circle cx="400" cy="210" r="22"/><circle cx="580" cy="210" r="22"/></g>
+  <g fill="#d28b27"><rect x="190" y="300" width="60" height="18" rx="9"/><rect x="370" y="300" width="60" height="18" rx="9"/><rect x="550" y="300" width="60" height="18" rx="9"/></g>
+  <text x="400" y="520" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#1e302b">Quadro de força</text>
+</svg>
