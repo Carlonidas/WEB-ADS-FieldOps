@@ -11,13 +11,16 @@
 </head>
 
 <body>
-  <nav class="navbar app-nav">
-    <div class="container-fluid app-container"><a class="navbar-brand brand" href="index.html"><span
-          class="brand-mark"><i class="bi bi-compass"></i></span><span>field<span
-            class="brand-accent">ops</span></span></a>
-      <div class="nav-links"><a class="nav-link" href="index.html">Visão geral</a><a class="nav-link"
-          href="inspecoes.html">Inspeções</a><a class="nav-link" href="planejamento.html">Planejamento</a><a
-          class="nav-link active" href="clientes.html">Cadastros</a></div>
+  <nav class="navbar navbar-expand-lg app-nav" aria-label="Navegação principal">
+    <div class="container-fluid app-container">
+      <a class="navbar-brand brand" href="index.html"><span class="brand-mark"><i class="bi bi-compass"></i></span><span>field<span class="brand-accent">ops</span></span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Visão geral</a></li><li class="nav-item"><a class="nav-link" href="inspecoes.html">Inspeções</a></li><li class="nav-item"><a class="nav-link" href="planejamento.html">Planejamento</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cadastros</a><ul class="dropdown-menu dropdown-menu-end"><li><a class="dropdown-item" href="clientes.html">Clientes</a></li><li><a class="dropdown-item" href="locais.html">Locais</a></li><li><a class="dropdown-item" href="equipamentos.html">Equipamentos</a></li><li><hr class="dropdown-divider"></li><li><a class="dropdown-item" href="checklists.html">Modelos de checklist</a></li></ul></li>
+        </ul>
+      </div>
     </div>
   </nav>
   <main class="container-fluid app-container page-content">
@@ -49,6 +52,7 @@
               <th>Endereço</th>
               <th>Equipamentos</th>
               <th>Status</th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -58,6 +62,7 @@
               <td>Campinas, SP</td>
               <td>12</td>
               <td><span class="status-badge status-done">Ativo</span></td>
+              <td class="text-end text-nowrap"><button class="btn btn-sm btn-outline-secondary" title="Visualizar" type="button" data-bs-toggle="modal" data-bs-target="#modalVisualizarLocal" data-nome="Unidade Centro" data-cliente="Indústria Horizonte" data-endereco="Campinas, SP" data-equipamentos="12" data-status="Ativo"><i class="bi bi-eye"></i></button> <button class="btn btn-sm btn-outline-primary" title="Editar" type="button"><i class="bi bi-pencil"></i></button> <button class="btn btn-sm btn-outline-danger" title="Excluir" type="button" data-bs-toggle="modal" data-bs-target="#modalExcluir" data-registro="Unidade Centro"><i class="bi bi-trash"></i></button></td>
             </tr>
             <tr>
               <td><strong>Planta Norte</strong><small>LO-002</small></td>
@@ -65,6 +70,7 @@
               <td>Jundiaí, SP</td>
               <td>8</td>
               <td><span class="status-badge status-done">Ativo</span></td>
+              <td class="text-end text-nowrap"><button class="btn btn-sm btn-outline-secondary" title="Visualizar" type="button" data-bs-toggle="modal" data-bs-target="#modalVisualizarLocal" data-nome="Planta Norte" data-cliente="Indústria Horizonte" data-endereco="Jundiaí, SP" data-equipamentos="8" data-status="Ativo"><i class="bi bi-eye"></i></button> <button class="btn btn-sm btn-outline-primary" title="Editar" type="button"><i class="bi bi-pencil"></i></button> <button class="btn btn-sm btn-outline-danger" title="Excluir" type="button" data-bs-toggle="modal" data-bs-target="#modalExcluir" data-registro="Planta Norte"><i class="bi bi-trash"></i></button></td>
             </tr>
             <tr>
               <td><strong>Armazém Sul</strong><small>LO-003</small></td>
@@ -72,6 +78,7 @@
               <td>São Paulo, SP</td>
               <td>16</td>
               <td><span class="status-badge status-done">Ativo</span></td>
+              <td class="text-end text-nowrap"><button class="btn btn-sm btn-outline-secondary" title="Visualizar" type="button" data-bs-toggle="modal" data-bs-target="#modalVisualizarLocal" data-nome="Armazém Sul" data-cliente="Logística Via Norte" data-endereco="São Paulo, SP" data-equipamentos="16" data-status="Ativo"><i class="bi bi-eye"></i></button> <button class="btn btn-sm btn-outline-primary" title="Editar" type="button"><i class="bi bi-pencil"></i></button> <button class="btn btn-sm btn-outline-danger" title="Excluir" type="button" data-bs-toggle="modal" data-bs-target="#modalExcluir" data-registro="Armazém Sul"><i class="bi bi-trash"></i></button></td>
             </tr>
           </tbody>
         </table>
@@ -79,6 +86,14 @@
     </section>
     <footer class="page-footer">Field Ops <span>·</span> Locais demonstrativos</footer>
   </main>
+  <div class="modal fade" id="modalVisualizarLocal" tabindex="-1" aria-labelledby="tituloVisualizarLocal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5" id="tituloVisualizarLocal">Detalhes do local</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body"><dl class="row mb-0"><dt class="col-sm-4">Local</dt><dd class="col-sm-8" data-ver="nome">—</dd><dt class="col-sm-4">Cliente</dt><dd class="col-sm-8" data-ver="cliente">—</dd><dt class="col-sm-4">Endereço</dt><dd class="col-sm-8" data-ver="endereco">—</dd><dt class="col-sm-4">Equipamentos</dt><dd class="col-sm-8" data-ver="equipamentos">—</dd><dt class="col-sm-4">Status</dt><dd class="col-sm-8" data-ver="status">—</dd></dl></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button></div></div></div>
+  </div>
+  <div class="modal fade" id="modalExcluir" tabindex="-1" aria-labelledby="tituloExcluirLocal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"><div class="modal-content"><div class="modal-header"><h2 class="modal-title fs-5" id="tituloExcluirLocal">Confirmar exclusão</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button></div><div class="modal-body">Deseja excluir <strong id="excluirRegistro">este registro</strong>? Esta ação é demonstrativa.</div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button><button type="button" class="btn btn-danger" data-bs-dismiss="modal">Excluir</button></div></div></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

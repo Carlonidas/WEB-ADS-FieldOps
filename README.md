@@ -20,6 +20,17 @@ O painel é voltado para o **supervisor**, profissional responsável por organiz
 
 ## 🖥️ Telas do protótipo
 
+| Tela | Arquivo | O que resolve |
+|---|---|---|
+| Dashboard | `index.html` | Indicadores, inspeções recentes, andamento e prioridades |
+| Clientes | `clientes.html` | Cadastro e consulta de clientes |
+| Locais | `locais.html` | Locais de inspeção |
+| Equipamentos | `equipamentos.html` | Equipamentos por local |
+| Checklists | `checklists.html` | Modelos, versão e status |
+| Planejamento | `planejamento.html` | Criação manual de inspeção |
+| Acompanhamento | `inspecoes.html` | Fila de inspeções e filtros |
+| Revisão | `revisao.html` | Respostas, evidências, não conformidades e aprovação |
+
 | Tela | Descrição |
 | --- | --- |
 | **Dashboard** | Menu de navegação, cards de indicadores (pendentes, em andamento, concluídas e com não conformidades), tabela de inspeções recentes, gráfico/elemento visual de andamento e alertas de inspeções prioritárias. |
@@ -89,7 +100,7 @@ fieldops/
 | --- | --- |
 | Repositório | https://github.com/Carlonidas/WEB-ADS-FieldOps  |
 | GitHub Project | https://github.com/users/Carlonidas/projects/2 |
-| Pull Request | https://github.com/Carlonidas/WEB-ADS-FieldOps/pulls |
+| Pull Request | https://github.com/Carlonidas/WEB-ADS-FieldOps/pull/25 |
 | GitHub Pages | https://carlonidas.github.io/WEB-ADS-FieldOps/ |
 
 ---

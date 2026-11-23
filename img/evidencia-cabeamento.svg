@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#e7ece8"/>
+  <path d="M120 500 C220 400 180 180 350 140 S580 300 680 100" fill="none" stroke="#ce6b55" stroke-width="28"/>
+  <path d="M120 430 C250 350 260 220 410 210 S560 390 680 250" fill="none" stroke="#5288a5" stroke-width="28"/>
+  <path d="M120 360 C280 290 300 120 470 100 S620 260 680 330" fill="none" stroke="#278466" stroke-width="28"/>
+  <rect x="80" y="470" width="640" height="70" rx="18" fill="#263b34"/>
+  <text x="400" y="515" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" fill="#fff">Cabeamento identificado</text>
+</svg>
