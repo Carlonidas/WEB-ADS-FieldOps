@@ -1,4 +1,64 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const iconesNavegacao = {
+    "index.html": "bi-grid-1x2-fill",
+    "inspecoes.html": "bi-clipboard-check",
+    "planejamento.html": "bi-calendar3"
+  };
+
+  document.querySelectorAll(".app-nav .navbar-nav > .nav-item > .nav-link").forEach((link) => {
+    const href = link.getAttribute("href");
+    const classeIcone = href === "#" ? "bi-buildings" : iconesNavegacao[href];
+    if (!classeIcone || link.querySelector("i")) return;
+
+    const icone = document.createElement("i");
+    icone.className = `bi ${classeIcone}`;
+    icone.setAttribute("aria-hidden", "true");
+    link.prepend(icone, document.createTextNode(" "));
+  });
+
+  const usuarioPadrao = {
+    nome: "Carlos Henrique",
+    iniciais: "CH"
+  };
+
+  let usuario = usuarioPadrao;
+  try {
+    const usuarioSalvo = JSON.parse(localStorage.getItem("fieldopsUsuarioAutenticado"));
+    if (usuarioSalvo?.nome && usuarioSalvo?.iniciais) {
+      usuario = usuarioSalvo;
+    } else {
+      try {
+        localStorage.setItem("fieldopsUsuarioAutenticado", JSON.stringify(usuarioPadrao));
+      } catch {
+        // Mantém o usuário padrão quando o navegador bloqueia o armazenamento local.
+      }
+    }
+  } catch {
+    try {
+      localStorage.setItem("fieldopsUsuarioAutenticado", JSON.stringify(usuarioPadrao));
+    } catch {
+      // Mantém o usuário padrão quando o navegador bloqueia o armazenamento local.
+    }
+  }
+
+  const navContainer = document.querySelector(".app-nav .app-container");
+  let supervisorChip = document.querySelector(".supervisor-chip");
+
+  if (navContainer && !supervisorChip) {
+    supervisorChip = document.createElement("div");
+    supervisorChip.className = "supervisor-chip";
+    supervisorChip.innerHTML = '<span class="avatar"></span><span class="d-none d-sm-inline nome-supervisor"></span><i class="bi bi-chevron-down small"></i>';
+    navContainer.appendChild(supervisorChip);
+  }
+
+  if (supervisorChip) {
+    const avatar = supervisorChip.querySelector(".avatar");
+    const nome = supervisorChip.querySelector(".nome-supervisor")
+      || supervisorChip.querySelector("span.d-none.d-sm-inline");
+    if (avatar) avatar.textContent = usuario.iniciais;
+    if (nome) nome.textContent = usuario.nome;
+  }
+
   document.querySelectorAll(".modal[id^='modalVisualizar']").forEach((modal) => {
     modal.addEventListener("show.bs.modal", (event) => {
       const data = event.relatedTarget?.dataset || {};
